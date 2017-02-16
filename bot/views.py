@@ -18,7 +18,7 @@ HEADER = {
 }
 
 def index(request):
-    return HttpResponse("This is bot api.")
+    return HttpResponse("This is bot api desu.")
 
 def reply_text(reply_token, text):
     reply = random.choice(osomatsu_serif)

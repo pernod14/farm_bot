@@ -1,5 +1,5 @@
 """
-WSGI config for osomatsu_bot project.
+WSGI config for farm_bot project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
