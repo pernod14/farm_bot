@@ -1,1 +1,1 @@
-osomatsu_serif = open("bot/osomatsu_serif.txt").read().split("\n")
+councelor_serif = open("bot/councelor_serif.txt").read().split("\n")

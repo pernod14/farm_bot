@@ -6,10 +6,12 @@ import requests
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from load_serif import osomatsu_serif  # 先ほどのおそ松のセリフ一覧をimport
+import sys
+sys.path.append('bot/')
+from load_serif import councelor_serif
 
 REPLY_ENDPOINT = 'https://api.line.me/v2/bot/message/reply'
-ACCESS_TOKEN = 'OwPdf1Qoa5q4CekStJTiLTf6U7pGxwXp5dVPmPwDz5UMHzHHRCIHiUZe7E1X2xqY3CRAfIgAisAOGXPb2ENV/ufixWCrYYkwrgzHbcz+4AznueulKAN+1KjC5c1GTZbf4/mba4N+YYWw2L5Oqe9mxAdB04t89/1O/w1cDnyilFU='
+ACCESS_TOKEN = 'fUCIabgTmtHFLi+yf/BTibQoL/UbPgkHH9GUUNpeYuExj+2d0NOt8fCwIDa+aNDSbVnaEwlm1ZGTTFikmNlyZES5woCL5RGDxqdz+VhAJorokEUhrCGUEQ8++LtyqmBX85BWsUHPQpEmcp/jCEp3DgdB04t89/1O/w1cDnyilFU='
 HEADER = {
     "Content-Type": "application/json",
     "Authorization": "Bearer " + ACCESS_TOKEN
