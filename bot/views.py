@@ -46,7 +46,7 @@ def callback(request):
         if message_type == 'text':
             text = e['message']['text']    # 受信メッセージの取得
             reply += reply_text(reply_token, text)   # LINEにセリフを送信する関数
-        elif message_type == 'imagemap':
+        else:
             reply += reply_text(reply_token, "photo")
     return HttpResponse(reply)  # テスト用
 
@@ -60,7 +60,7 @@ def chose_serif(text, councelor_serif):
     elif "tomato" in text or "potato" in text or "pumpkin" in text:
         return "I like it! Show me the photo!"
     elif "photo" in text:
-        return "Lovely! Finally, tell me your farm concept"
+        return "Lovely! Nice photo! Finally, tell me your farm concept"
     elif "bootstrap" in text:
         return "Touching! How about this one. http://hajimaru-farm00.herokuapp.com"
     else:
