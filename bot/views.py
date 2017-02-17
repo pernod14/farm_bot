@@ -53,14 +53,14 @@ def callback(request):
 
 def chose_serif(text, councelor_serif):
     text = text.lower()
-    if "farm" in text:
+    if "hajimaru" in text:
         return "Sounds good! Where is?"
     elif "tokyo" in text:
         return "City farmer! What's your recommend?"
     elif "tomato" in text or "potato" in text or "pumpkin" in text:
         return "I like it! Show me the photo!"
     elif "photo" in text:
-        return "Lovely! Nice photo! Finally, tell me your farm concept"
+        return "Lovely! Nice photo! Finally, tell me your farm concept."
     elif "bootstrap" in text:
         return "Touching! How about this one. http://hajimaru-farm00.herokuapp.com"
     else:
