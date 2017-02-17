@@ -21,7 +21,8 @@ def index(request):
     return HttpResponse("This is bot api desu.")
 
 def reply_text(reply_token, text):
-    reply = random.choice(councelor_serif)
+    #reply = random.choice(councelor_serif)
+    reply = chose_serif(text, councelor_serif)
     payload = {
           "replyToken":reply_token,
           "messages":[
@@ -46,3 +47,14 @@ def callback(request):
             text = e['message']['text']    # 受信メッセージの取得
             reply += reply_text(reply_token, text)   # LINEにセリフを送信する関数
     return HttpResponse(reply)  # テスト用
+
+
+def chose_serif(text, councelor_serif):
+    if "farm" in text:
+        return "Sounds good! Where is?"
+    elif "Tokyo" in text:
+        return "City farmer! What's your recommend product?"
+    elif "Tomato" in text:
+        return "I like it! Show me some picture!"
+    else:
+        return "OMG! It's out of scenario. Tell me your farm name again!"
