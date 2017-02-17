@@ -55,7 +55,7 @@ def chose_serif(text, councelor_serif):
         return "Sounds good! Where is?"
     elif "tokyo" in text:
         return "City farmer! What's your recommend?"
-    elif "tomato" or "pumpkin" or "potato" in text:
+    elif "tomato" in text or "potato" in text or "pumpkin" in text:
         return "I like it! Show me the picture!"
     else:
         return "OMG! It's out of scenario. Tell me your farm name again!"
