@@ -34,6 +34,7 @@ def reply_text(reply_token, text):
     }
 
     requests.post(REPLY_ENDPOINT, headers=HEADER, data=json.dumps(payload)) # LINEにデータを送信
+    requests.post(REPLY_ENDPOINT, headers=HEADER, data=json.dumps(payload))
     return reply
 
 def callback(request):
@@ -50,11 +51,12 @@ def callback(request):
 
 
 def chose_serif(text, councelor_serif):
+    text = lower(text)
     if "farm" in text:
         return "Sounds good! Where is?"
-    elif "Tokyo" in text:
+    elif "tokyo" in text:
         return "City farmer! What's your recommend product?"
-    elif "Tomato" in text:
-        return "I like it! Show me some picture!"
+    elif "tomato" in text:
+        return "I like it! Show me some pictures!"
     else:
         return "OMG! It's out of scenario. Tell me your farm name again!"
