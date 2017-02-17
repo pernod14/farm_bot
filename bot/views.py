@@ -50,7 +50,7 @@ def callback(request):
 
 
 def chose_serif(text, councelor_serif):
-    text = lower(text)
+    text = text.lower()
     if "farm" in text:
         return "Sounds good! Where is?"
     elif "tokyo" in text:
